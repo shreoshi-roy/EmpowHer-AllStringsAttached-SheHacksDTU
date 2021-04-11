@@ -18,7 +18,7 @@
 	<meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>Terms Conditions - Tivo - SaaS App HTML Landing Page Template</title>
+    <title>SheHacks</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
@@ -203,7 +203,7 @@
             <div class="opportunity-card">
               <div class="card-text">
                 <h3>Myntra Hackerramp weforshe</h3>
-                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 23th April,2021</span>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 23rd April,2021</span>
                 <p>Women! Win Rs. 1,75,000 as prize money and a chance to get interviewed at Myntra (CTC ~24 LPA)
 Myntra is organizing a hackathon for women.
 Only for female students
@@ -231,46 +231,44 @@ Last date to register: 12th March</p>
               </div>
             </div>
 
-            <div class="opportunity-card new-opportunity-card" style="display: none";>
-              <div class="card-text">
+            <div class="opportunity-card new-opportunity-card" style="display:none;">
+              <div class="card-text" style="width:65%;">
                 <h3>SheHacks DTU</h3>
-                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 9th April,2021</span>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 15th April,2021</span>
                 <p>Shoutout to all women in technology out there! CLIMB DTU is here with SheHacksDTU- Delhi's Largest All Women Hackathon! If you think you have the passion of coming up with innovative ideas to real world problems, then this is indeed the perfect platform for you!
                 Registrations are now open!
                 New to tech? Can't find a team? Don't worry we have you covered. We are extremely beginner-friendly and will provide mentorship throughout the hackathon and have ice-breaking sessions scheduled to help lone wolves find their pack!
                 Let's break the stereotypes and
                 INCLUDE HER!</p>
-                <a href="https://shreoshi-roy.github.io/SheHacks-DTU/"></a>
+                <a href="http://shehacks.climb.community/">http://shehacks.climb.community/</a>
               </div>
-              <div class="card-image">
-                <img src="{{url_for('static', filename='images/shehacks.jpeg')}}" alt="">
+              <div class="card-image" style="width:35%;">
+                <img src="{{url_for('static', filename='images/shehacks.jfif')}}" alt="">
               </div>
             </div>
           </div>
 
 
           <!-- TECHNICAL Scholarships -->
-          <!-- <div class="content interest interest" id="technical-scholarship" style="display:none">
+          <div class="content interest interest" id="technical-scholarship" style="display:none;">
            <div class="opportunity-card">
              <div class="card-text">
                <h3>Generation Google Scholarship</h3>
+               <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 16th April,2021</span>
                <p>Ready to be inspired?
                  Applications for the 2021 Generation Google Scholarship: for women in computer science (APAC) are now open! Learn more about eligibility.
-                 Generation Google Scholarship: for women in computer science (formerly known as Women Techmakers Scholarship) aims to inspire and support students in the fields of computing and technology and become active role models and leaders in the industry. As a scholar, you will receive a cash award for the 2021-2022 academic year and be invited to attend the annual (virtual) Scholars' Retreat to connect with fellow scholars, network with Googlers and participate in a number of developmental workshops to help enhance your skills to prepare you for a better tomorrow.
-                 Still on the fence?
-                 Google is hosting an Info Session over Youtube Livestream on Monday, 15th March 2021 where you will get to meet former scholars and ask live questions!
-                 Application closing on Monday, 29th March 2021.
-                </p>
-               <a href="http://goo.gle/3kidA0l%22%3EApply"></a>
+                 Generation Google Scholarship: for women in computer science (formerly known as Women Techmakers Scholarship) aims to inspire and support students in the fields of computing and technology and become active role models and leaders in the industry.
+              </p>
+               <a href="http://goo.gle/3kidA0l%22%3EApply">http://goo.gle/3kidA0l%22%3EApply</a>
              </div>
              <div class="card-image">
                <img src="{{url_for('static', filename='images/wtm.png')}}" alt="">
              </div>
            </div>
-         </div> -->
+         </div>
 
           <!-- TECHNICAL Mentorships -->
-          <div class="content interest interest-active" id="technical-mentorship" style="display:none">
+          <div class="content interest interest-active" id="technical-mentorship" style="display:none;">
             <div class="opportunity-card">
               <div class="card-text">
                 <h3>JP morgan Quant mentorship program</h3>
@@ -287,7 +285,7 @@ Last date to register: 12th March</p>
 
 
           <!-- NON-TECH -->
-          <div class="content interest" id="non-tech-job" style="display:none">
+          <div class="content interest" id="non-tech-job" style="display:none;">
             <div class="opportunity-card">
               <div class="card-text">
                 <h3>Data Analyst, Apple</h3>
@@ -782,14 +780,13 @@ Self-driven with the capability to work without continuous supervision
           }
         }
         final_category = final_category+"-"+categoryName;
-        // console.log(final_category);
         document.getElementById(final_category).style.display = "block";
 
         if(final_category == "technical-hackathon"){
           var x = document.querySelector(".new-opportunity-card");
           setTimeout(function(){
-            x.style.display = "block";
-          }, 10000);
+            x.style.display = "flex";
+          }, 8000);
         }
       }
     </script>

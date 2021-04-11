@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="website is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
+    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
     <meta name="author" content="Inovatik">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
@@ -22,12 +22,11 @@
 
   <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-    <link href="css/swiper.css" rel="stylesheet">
-	<link href="css/magnific-popup.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
-
+    <link href="{{ url_for('static',filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/fontawesome-all.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/swiper.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/magnific-popup.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static',filename='css/styles.css') }}" rel="stylesheet">
 	<!-- Favicon  -->
     <!-- <link rel="icon" href="images/favicon.png"> -->
 </head>
@@ -49,10 +48,11 @@
         <div class="container">
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">website</a> -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html">Empowher</a>
+            <!-- <a class="navbar-brand logo-image" href="/"><img src="{{url_for('static', filename='images/logo.png')}}" alt="alternative"></a> -->
+            <a class="navbar-brand logo-image" href="/">EmpowHer</a>
 
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,30 +64,32 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html">HOME <span class="sr-only">(current)</span></a>
+                        <a class="nav-link page-scroll" href="/">HOME <span class="sr-only">(current)</span></a>
                     </li>
                     <!-- Dropdown Menu -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle page-scroll" href="" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">OPPORTUNITIES</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="find-opportunity.html"><span class="item-text">FIND OPPORTUNITIES</span></a>
+                          <a class="dropdown-item" href="/find-opportunity"><span class="item-text">FIND OPPORTUNITIES</span></a>
                           <div class="dropdown-items-divide-hr"></div>
-                            <a class="dropdown-item" href="post-opportunity.html"><span class="item-text">POST AN OPPORTUNITY</span></a>
+                            <a class="dropdown-item" href="/post-opportunity"><span class="item-text">POST AN OPPORTUNITY</span></a>
+                            <!-- <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a> -->
                         </div>
                     </li>
                     <!-- end of dropdown menu -->
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#details">RESUME SCREENING</a>
+                        <a class="nav-link page-scroll" href="/resume-screening">RESUME SCREENING</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#">INTERVIEWS</a>
+                        <a class="nav-link page-scroll" href="/interviews">INTERVIEWS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="/social">SOCIAL</a>
                     </li>
                 </ul>
                 <span class="nav-item">
-                    <a class="btn-outline-sm" href="">LOG IN</a>
+                    <a class="btn-outline-sm" href="/login">LOG IN</a>
                 </span>
             </div>
         </div> <!-- end of container -->
@@ -100,17 +102,17 @@
         <div class="header-content">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-6">
                         <div class="text-container">
                             <h1>Your holy grail to the latest career opportunities</h1>
                             <p class="p-large">Your one-stop platform for faster, clearer and clutter-free access to every career opportunity</p>
-                            <a class="btn-solid-lg page-scroll" href="sign-up.html">SIGN UP</a>
+                            <a class="btn-solid-lg page-scroll" href="/signup">SIGN UP</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="image-container">
                             <div class="img-wrapper">
-                                <!-- <img class="img-fluid" src="images/header-software-app.png" alt="alternative"> -->
+                                <img class="img-fluid" src="{{url_for('static', filename='images/main.png')}}" alt="alternative">
                             </div> <!-- end of img-wrapper -->
                         </div> <!-- end of image-container -->
                     </div> <!-- end of col -->
@@ -168,120 +170,120 @@
     <!-- end of customers -->
 
     <!-- Features -->
-      <div id="features" class="tabs">
-          <div class="container">
-              <!-- <div class="row"> -->
-                  <!-- <div class="col-lg-12">
-                      <div class="above-heading">FEATURES</div>
-                      <h2 class="h2-heading">Marketing Automation</h2>
-                      <p class="p-heading">Take your business strategy to the next level and automatize your marketing tasks to save time for product development. Tivo can provide results in less than 2 weeks</p>
-                  </div> <!-- end of col -->
-              <!-- </div> <!-- end of row -->
-              <div class="row">
-                  <div class="col-lg-12">
-                      <!-- Tabs Links -->
-                      <!-- <ul class="nav nav-tabs" id="argoTabs" role="tablist">
-                          <li class="nav-item">
-                              <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-list"></i>List Builder</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-envelope-open-text"></i>Campaigns</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false"><i class="fas fa-chart-bar"></i>Analytics</a>
-                          </li>
-                      </ul> -->
-                      <!-- end of tabs links -->
+    <div id="features" class="tabs">
+        <div class="container">
+            <!-- <div class="row"> -->
+                <!-- <div class="col-lg-12">
+                    <div class="above-heading">FEATURES</div>
+                    <h2 class="h2-heading">Marketing Automation</h2>
+                    <p class="p-heading">Take your business strategy to the next level and automatize your marketing tasks to save time for product development. Tivo can provide results in less than 2 weeks</p>
+                </div> <!-- end of col -->
+            <!-- </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Tabs Links -->
+                    <!-- <ul class="nav nav-tabs" id="argoTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-list"></i>List Builder</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-envelope-open-text"></i>Campaigns</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false"><i class="fas fa-chart-bar"></i>Analytics</a>
+                        </li>
+                    </ul> -->
+                    <!-- end of tabs links -->
 
-                      <!-- Tabs Content -->
-                      <div class="tab-content" id="argoTabsContent">
+                    <!-- Tabs Content -->
+                    <div class="tab-content" id="argoTabsContent">
 
-                          <!-- Tab -->
-                          <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
-                              <div class="row">
-                                  <div class="col-lg-6">
-                                      <div class="image-container">
-                                          <img class="img-fluid" src="images/goals.png" />
-                                      </div> <!-- end of image-container -->
-                                  </div> <!-- end of col -->
-                                  <div class="col-lg-6">
-                                      <div class="text-container">
-                                          <h3>Our Goal</h3>
-                                          <p>to make a one stop place for all the opportunities and community for women and provide them with tools to grow together by connecting with relevant group of people and mentors.
-                                          </p>
-                                          <ul class="list-unstyled li-space-lg">
-                                              <li class="media">
-                                                  <i class="fas fa-square"></i>
-                                                  <div class="media-body">Display opportunities in an organized manner to avoid spam </div>
-                                              </li>
-                                              <li class="media">
-                                                  <i class="fas fa-square"></i>
-                                                  <div class="media-body">Create a safe space for women to discuss issues and discuss opportunities</div>
-                                              </li>
+                        <!-- Tab -->
+                        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="{{url_for('static', filename='images/goals.png')}}" />
+                                    </div> <!-- end of image-container -->
+                                </div> <!-- end of col -->
+                                <div class="col-lg-6">
+                                    <div class="text-container">
+                                        <h3>Our Goal</h3>
+                                        <p>to make a one stop place for all the opportunities and community for women and provide them with tools to grow together by connecting with relevant group of people and mentors.
+                                        </p>
+                                        <ul class="list-unstyled li-space-lg">
+                                            <li class="media">
+                                                <i class="fas fa-square"></i>
+                                                <div class="media-body">Display opportunities in an organized manner to avoid spam </div>
+                                            </li>
+                                            <li class="media">
+                                                <i class="fas fa-square"></i>
+                                                <div class="media-body">Create a safe space for women to discuss issues and discuss opportunities</div>
+                                            </li>
 
-                                          </ul>
-                                          <!-- <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">LIGHTBOX</a> -->
-                                      </div> <!-- end of text-container -->
-                                  </div> <!-- end of col -->
-                              </div> <!-- end of row -->
-                          </div> <!-- end of tab-pane -->
-                          <!-- end of tab -->
+                                        </ul>
+                                        <!-- <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">LIGHTBOX</a> -->
+                                    </div> <!-- end of text-container -->
+                                </div> <!-- end of col -->
+                            </div> <!-- end of row -->
+                        </div> <!-- end of tab-pane -->
+                        <!-- end of tab -->
 
-                      </div> <!-- end of tab content -->
-                      <!-- end of tabs content -->
+                    </div> <!-- end of tab content -->
+                    <!-- end of tabs content -->
 
-                  </div> <!-- end of col -->
-              </div> <!-- end of row -->
-          </div> <!-- end of container -->
-      </div> <!-- end of tabs -->
-      <!-- end of features -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of tabs -->
+    <!-- end of features -->
 
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <defs><style>.elementor-shape-fill-1{fill:#ffafd5;}</style></defs>
-      <path class="elementor-shape-fill-1" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
-      c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
-      c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
-    </svg>
-            <!-- Details -->
-            <div id="details" class="basic-1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="text-container">
-                                <h3>Our Services</h3>
-                                <p><i class="fas fa-check"></i>As promised, our platform provides you with access to plenty of resources to kick-start your career trail.</p>
-                                <p><i class="fas fa-check"></i> Never miss an opportunity again, we have got you covered with a vibrant community to keep you updated! </p>
-                                <p><i class="fas fa-check"></i> Not only that, connect with interviewers or professionals and network with your peers</p>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <defs><style>.elementor-shape-fill-1{fill:#ffafd5;}</style></defs>
+  <path class="elementor-shape-fill-1" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+  c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+  c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+</svg>
+        <!-- Details -->
+        <div id="details" class="basic-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text-container">
+                            <h3>Our Services</h3>
+                            <p><i class="fas fa-check"></i>As promised, our platform provides you with access to plenty of resources to kick-start your career trail.</p>
+                            <p><i class="fas fa-check"></i> Never miss an opportunity again, we have got you covered with a vibrant community to keep you updated! </p>
+                            <p><i class="fas fa-check"></i> Not only that, connect with interviewers or professionals and network with your peers</p>
 
-                                <!-- <ul class="list-unstyled li-space-lg">
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Understand customers and meet their requirements</div>
-                                    </li>
-                                    <li class="media">
-                                        <i class="fas fa-square"></i>
-                                        <div class="media-body">Targeted client base with Tivo's efficient technology</div>
-                                    </li>
-                                </ul> -->
-                                <!-- <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a> -->
-                                <!-- <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a> -->
-                            </div> <!-- end of text-container -->
-                        </div> <!-- end of col -->
-                        <div class="col-lg-6">
-                            <div class="image-container">
-                                <!-- <img class="img-fluid services-img" src="{{url_for('static', filename='images/services.png')}}" alt="alternative"> -->
-                            </div> <!-- end of image-container -->
-                        </div> <!-- end of col -->
-                    </div> <!-- end of row -->
-                </div> <!-- end of container -->
-            </div> <!-- end of basic-1 -->
+                            <!-- <ul class="list-unstyled li-space-lg">
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">Understand customers and meet their requirements</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">Targeted client base with Tivo's efficient technology</div>
+                                </li>
+                            </ul> -->
+                            <!-- <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a> -->
+                            <!-- <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a> -->
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-lg-6">
+                        <div class="image-container">
+                            <img class="img-fluid services-img" src="{{url_for('static', filename='images/services.png')}}" alt="alternative">
+                        </div> <!-- end of image-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of basic-1 -->
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <defs><style>.elementor-shape-fill-2{fill:#ffafd5;}</style></defs>
-            	<path class="elementor-shape-fill-2" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
-            	c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
-            	c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
-            </svg>
-            <!-- end of details -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <defs><style>.elementor-shape-fill-2{fill:#ffafd5;}</style></defs>
+        	<path class="elementor-shape-fill-2" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
+        	c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
+        	c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
+        </svg>
+        <!-- end of details -->
 
 
     <!-- Description -->
@@ -299,11 +301,10 @@
                     <!-- Card -->
                     <div class="card">
                         <div class="card-image">
-                            <!-- <img class="img-fluid" src="images/description-1.png" alt="alternative"> -->
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title">Timely Postings</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <h4 class="card-title" style="color: #ff3796;">Organised Opportunities</h4>
+                            <p>Lost in a sea of posts and don't know which ones are for you? Make use of our systematic channels to find something for yourself today!</p>
                         </div>
                     </div>
                     <!-- end of card -->
@@ -311,11 +312,50 @@
                     <!-- Card -->
                     <div class="card">
                         <div class="card-image">
-                            <!-- <img class="img-fluid" src="images/description-2.png" alt="alternative"> -->
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title">Well Organized Content</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <h4 class="card-title" style="color: #ff3796;">Automatic Classification</h4>
+                            <p>Tired of posting the same opportunity in multiple places? Our automatic classifier filters them into relevant channels without any labour</p>
+                        </div>
+                    </div>
+
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: #ff3796;">Schedule Mock Interviews</h4>
+                            <p>Have Interview scares often? Why not be prepared for them beforehand with our Mock Interview Sessions with our female Industry Experts</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: #ff3796;">Resume Screening</h4>
+                            <p>Visualise the overall picture of your Resume in the form of a pie-chart and look at the areas of expertise your resume convey</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+
+                    <div class="card">
+                        <div class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: #ff3796;">Networking</h4>
+                            <p>Access our community bonding chat room and expand your network without any backlash, judgement and unsolicited messages</p>
                         </div>
                     </div>
                     <!-- end of card -->
@@ -323,11 +363,10 @@
                     <!-- Card -->
                     <div class="card">
                         <div class="card-image">
-                            <!-- <img class="img-fluid" src="images/description-3.png" alt="alternative"> -->
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title">No unwanted attention</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <h4 class="card-title" style="color: #ff3796;">Smart Chat Assistant</h4>
+                            <p>A smart chat assistant for your ease, which helps you to find relevant opportunities with keywords like company name, job-role, etc.</p>
                         </div>
                     </div>
                     <!-- end of card -->
@@ -340,16 +379,23 @@
 
 
 
-
-
-
-
     <!-- Join -->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">  <defs><style>.elementor-shape-fill-4{fill:#ffafd5;}</style></defs>
+    	<path class="elementor-shape-fill-4" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+    	c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+    	c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+    </svg> -->
     <div class="join">
       <h1>Level Up Your Career</h1>
-      <div class="p-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</div>
+      <div class="p-heading">Find the perfect community and resources to aid your career growth!</div>
         <a class="btn-outline-lg" href="sign-up.html">JOIN COMMUNITY</a>
     </div>
+    <!-- <svg class="inverted-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <defs><style>.elementor-shape-fill-5{fill:#ffafd5;} .inverted-svg{transform: rotate(180deg);}</style></defs>
+    	<path class="elementor-shape-fill-5" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+    	c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+    	c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+    </svg> -->
+    <!-- end of Join -->
 
 
     <!-- Donate-->
@@ -361,7 +407,7 @@
           <a class="btn-solid-reg" href="">DONATE</a>
         </div>
         <div class="image-container col-lg-5">
-            <!-- <img class="img-fluid donate-img" src="{{url_for('static', filename='images/donate.png')}}" alt="alternative"> -->
+            <img class="img-fluid donate-img" src="{{url_for('static', filename='images/donate.png')}}" alt="alternative">
         </div>
     </div>
     <!-- end of donate -->
@@ -407,16 +453,44 @@
     <!-- end of footer -->
 
 
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Template by Inovatik</a></p> -->
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
 
 
     <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{ url_for('static',filename='js/popper.min.js') }}"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script> <!-- Bootstrap framework -->
+    <script src="{{ url_for('static',filename='js/jquery.easing.min.js') }}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{{ url_for('static',filename='js/swiper.min.js') }}"></script> <!-- Swiper for image and text sliders -->
+    <script src="{{ url_for('static',filename='js/jquery.magnific-popup.js') }}"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="{{ url_for('static',filename='js/validator.min.js') }}"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="{{ url_for('static',filename='js/scripts.js') }}"></script> <!-- Custom scripts -->
+    <df-messenger
+      intent="WELCOME"
+      chat-title="EmpowHer"
+      agent-id="79cdc91d-f53c-4dad-907d-c15f3c8d81ec"
+      language-code="en"
+    ></df-messenger>
+    <script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings =
+            {"appId":"17166c955f267a2fa5e4066019cd2f03f","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
 </body>
 </html>
