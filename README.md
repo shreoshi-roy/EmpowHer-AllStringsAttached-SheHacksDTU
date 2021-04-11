@@ -1,4 +1,4 @@
-# EmpowHer was built by All Strings Attached as a part of SheHacks DTU 2021 conducted by CLIMB DTU.
+### EmpowHer was built by All Strings Attached as a part of SheHacks DTU 2021 conducted by CLIMB DTU.
 # EmpowHer
 ## A one stop place for all the opportunities and community for women  
   
