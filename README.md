@@ -21,7 +21,9 @@ Download the trained NLP model from (put in the same folder): https://drive.goog
 
 ---  
 
-
+![alt text](https://github.com/Anima108/EmpowHer-AllStringsAttached-SheHacksDTU/blob/main/unknown%20(1).png?raw=true)  
+  
+  
 ## Themes/Use Cases: 
 ### Social Good:  
   
