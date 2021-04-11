@@ -23,7 +23,7 @@ Download the trained NLP model from (put in the same folder): https://drive.goog
 
 
 ## Themes/Use Cases: 
-Social Good:  
+### Social Good:  
   
 – A lack of diversification in the industries is an ongoing problem and is important to address if we want to create solutions that cater to every section of the population.👩🏽👧🏻👭👩    
     
