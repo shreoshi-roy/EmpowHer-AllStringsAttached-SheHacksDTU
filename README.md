@@ -32,7 +32,8 @@ Download the trained NLP model from (put in the same folder): https://drive.goog
 – With Empowher, we aim to support women in their careers. Since women face a lot of passive aggressive comments and messages on career portals, we decided to make a safe space only for women where they can access relevant opportunities without all the negativity.🔇   
     
 – Women understand what fellow women may be going through like imposter syndrome, being under confident, apologizing too much and hence have curated sections like interviews by accomplished women in respective fields, Resume Screening and connecting with female role models to boost their career.✨👩🏾‍🤝‍👩🏼  
+    
+![alt text](https://github.com/Anima108/EmpowHer-AllStringsAttached-SheHacksDTU/blob/main/unknown%20(2).png?raw=true)  
   
-
 
 
